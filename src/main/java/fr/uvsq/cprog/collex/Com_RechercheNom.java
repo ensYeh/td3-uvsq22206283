@@ -1,7 +1,7 @@
-    package fr.uvsq.cprog.collex;
+package fr.uvsq.cprog.collex;
 
 // commande pour rechercher le nom de machine associé à une adresse IP
-public class RechercheNom implements Commande{
+public class Com_RechercheNom implements Commande{
     private Dns dns;
     private AdresseIP ip;
 
@@ -14,7 +14,7 @@ public class RechercheNom implements Commande{
     public void execute() {
         DnsItem item = dns.getItem(ip);
         if (item != null) {
-            System.out.println(item.getNomMachine());
+            System.out.println(item.getNomMachine().getNomComplet());
         } else {
             System.out.println("ERREUR : IP introuvable !");
         }

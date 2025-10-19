@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
 
 public class Dns {
     private List<DnsItem> items;   // liste des entrées DNS
@@ -62,6 +63,7 @@ public class Dns {
                 result.add(item);
             }
         }
+        result.sort(Comparator.comparing(item -> item.getNomMachine().getNom())); // tri par nom de machine
         return result;
     }
 

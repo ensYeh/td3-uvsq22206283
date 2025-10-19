@@ -66,7 +66,6 @@ public class Dns {
     }
 
     // ajouter un nouvel item
-
     public void addItem(AdresseIP ip, NomMachine nomMachine) throws IOException {
         // verification de l'unicité
         if (getItem(ip) != null) {

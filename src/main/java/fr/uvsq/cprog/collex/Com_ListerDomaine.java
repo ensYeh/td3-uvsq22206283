@@ -1,8 +1,6 @@
 package fr.uvsq.cprog.collex;
 import java.util.List;
 
-
-
 // commande pour lister toutes les machines d'un domaine
 public class Com_ListerDomaine implements Commande{
     private Dns dns;
